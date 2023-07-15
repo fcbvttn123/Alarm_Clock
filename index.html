@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/32f723cad5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="card">
+
+            <div class="time">
+
+                <span class="hour">.. : </span>
+
+                <span class="minute">.. : </span>
+
+                <span class="second">..</span>
+
+            </div>
+
+            <div class="alarm-setting">
+
+                <div class="inputBox">
+
+                    <input type="number" name="input-hour" id="input-hour">
+
+                    <input type="number" name="input-minute" id="input-minute">
+
+                </div>
+
+                <button class="add-alarm-btn">Add Alarm</button>
+
+            </div>
+
+            <ul class="alarm-list">
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <template>
+
+        <li>
+
+            <p class="alarm-time"></p>
+
+            <input type="checkbox" name="alarm-checkbox" id="alarm-checkbox">
+
+            <button class="remove-icon">
+                <i class="fa-solid fa-dumpster"></i>
+            </button>
+
+        </li>
+
+    </template>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+    background-color: #3376f2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: #e1dfeb;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 48%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #6c6b73;
+    position: absolute;
+    left: 0;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translateX(100%);
+    background-color: #307dff;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #d7e0ff;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+@media (max-width: 600px) {
+
+    .card {
+        width: 95%;
+    }
+    
+}
+
+.card .time {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card .alarm-setting {
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .5rem;
+}
+
+.card .alarm-setting .inputBox input {
+    border: 1px solid black;
+    padding: .5rem;
+    border-radius: .5rem;
+    width: 3rem;
+    background-color: white;
+}
+
+.card .alarm-setting button {
+    background-color: #3376f2;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.alarm-list {
+    margin-top: 1rem;
+}
+
+.alarm-list li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border-bottom: 1px solid black;
+}
+
+.alarm-list li > input {
+    margin-left: auto;
+    margin-right: .5rem;
+}
+
+.fa-dumpster {
+    cursor: pointer;
+}
+
+@media (max-width: 250px) {
+
+    .alarm-list li {
+        justify-content: flex-start;
+    }
+
+    .alarm-list li > p {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    
+}
